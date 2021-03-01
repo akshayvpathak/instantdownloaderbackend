@@ -1,7 +1,7 @@
 /* eslint-disable no-use-before-define */
 const axios = require('axios');
 
-exports.InstagramReelInfo = async (url) => await InstagramReelInfo(url);
+exports.InstagramReelInfo = (url) => InstagramReelInfo(url);
 
 async function InstagramReelInfo(url) {
   try {
@@ -10,7 +10,6 @@ async function InstagramReelInfo(url) {
         __a: 1,
       },
     });
-    console.log(res);
     return res;
   } catch (err) {
     console.log(err);
