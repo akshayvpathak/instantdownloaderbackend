@@ -10,6 +10,7 @@ async function GetVideoUrl(req, res, next) {
     const { url } = req.body;
     const newurl = url.split('?');
     const reelinfo = await InstagramReelInfo(newurl[0]);
+    console.log(reelinfo);
     if (!reelinfo.data) {
       throw FailureMessage();
     }
